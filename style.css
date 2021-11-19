@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DarkCyan: hsl(184, 100%, 22%);
+  --VeryDarkCyan: hsl(179, 100%, 13%);
+  --TransparentWhite: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+  --VeryLightGray: hsl(0, 0%, 95%) /*(background, headings, buttons)*/
+}
+
+body{
+  background-color: var(--VeryLightGray);
+  width: 1440px;
+  height: 800px;
+}
+.container{
+  margin: 0 auto;
+  position: relative;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.flex{
+  width: 918px;
+  height: 499px;
+  display: flex;
+  flex-direction: row;
+  margin: 170px auto;
+  color: var(--VeryLightGray);
+}
+
+.sedans{
+  border-radius: 10px 0 0 10px;
+  background-color: var(--BrightOrange);
+  padding: 45px 50px;
+}
+
+.suvs{
+  background-color: var(--DarkCyan);
+  padding: 45px 50px;
+}
+
+.luxury{
+  border-radius: 0 10px 10px 0;
+  background-color: var(--VeryDarkCyan);
+  padding: 45px 50px;
+}
+
+.img{
+  width: 50px;
+}
+
+h2{
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  padding: 40px 0;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+p{
+  font-family: 'Lexend', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+input[type=button]{
+  width: 130px;
+  padding: 10px;
+  border: 1px solid var(--VeryLightGray);
+  border-radius: 25px;
+  background-color: var(--VeryLightGray);
+  font-family: 'Lexend', sans-serif;
+  margin: 80px 0;
+}
+
+.btn-sedans {
+  color: var(--BrightOrange);
+}
+.btn-suvs{
+  color: var(--DarkCyan);
+}
+.btn-luxury{
+  color: var(--VeryDarkCyan);
+}
+
+.btn:hover{
+  background-color: transparent;
+  color: var(--VeryLightGray);
+}
+
+
+.attribution { 
+  text-align: center;
+  font-size: 11px; 
+  font-family: 'Lexend', sans-serif;
+}
+.attribution a { 
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--DarkCyan); 
+}
+.attribution a:hover{
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  body{
+    width:fit-content;
+  }
+  .container{
+    width: 375px;
+    position: relative;
+    z-index: 1;
+    height: 1450px;
+  }
+   .flex{
+    flex-direction: column;
+    width: 328px;
+    /* height: 309px; */
+  }
+  .flex .sedans{
+    padding: 45px;
+  }
+  .sedans{
+    border-radius: 10px 10px 0 0;
+  }
+  .luxury{
+    border-radius: 0 0 10px 10px;
+  }
+  input[type=button]{
+    margin: 50px 0 0;
+  }
+  .attribution{
+    bottom: 0;
+    position: relative;
+    flex-grow: 1;
+    margin:0 auto 20px;
+  }
+}
